@@ -1,0 +1,103 @@
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.overlay {
+    min-height: 100vh;
+    background: whitesmoke;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 500px;
+    background: white;
+    padding: 40px;
+    position: relative;
+}
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.close-btn {
+    display:flex;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 23px;
+    color: green;
+    text-decoration: none;
+    justify-content: flex-end;
+}
+form button {
+    width: 100%;
+    padding: 15px;
+    background: #49a85a;
+    color:white;
+    border: none;
+    border-radius:4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.facebook-button,
+.google-button{
+    display:flex;
+    align-items: center;
+    gap:10px;
+    padding: 10px 16px;
+    background:white;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 14px;
+    border: 1px solid rgb(156, 155, 155);
+    width: 240px;
+}
+.facebook-button img {
+    width: 18px;
+    height: 18px;
+}
+.google-button img{
+    width: 18px;
+    height: 18px;
+}
+.buttons {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+}
+.tabs {
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+.tabs span {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.active {
+    color: #49a85a;
+
+}
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0 ;
+
+}
+.divider::before,
+.divider::after {
+    content :"";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
