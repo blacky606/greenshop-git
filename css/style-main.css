@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border:none;
+    outline: none;
+}
+body {
+   
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+}
+section {
+    margin-top: 10vh;
+}
+    header{
+
+        background:#fff;
+        padding:30px 0 14px;
+
+    }
+.container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+     justify-content: space-between;
+     align-items: center;
+     padding-bottom: 6px;
+     border-bottom: 0.1px solid rgb(183, 183, 183);
+}
+
+    nav {
+        display:flex;
+        gap:50px;
+}
+    nav a{
+        text-decoration: none;
+        color:#3d3d3d;
+        position:relative;
+    }
+
+    nav a.active::after{
+        content:"";
+        position:absolute;
+        left:0;
+        bottom:-8px;
+        width:100%;
+        height:3px;
+        background:#46A358;
+    }
+
+.login{
+    display:flex;
+    align-items: center;
+    gap:8px;
+    padding:10px 25px;
+    background:#46A358;
+    color:#fff;
+    border-radius:6px;
+    cursor:pointer;
+    text-decoration: none;
+}
+.home {
+    max-width: 1200px;
+    min-height:450px;
+    margin: 50px auto 0;
+    background:#f8f8f8;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:60px 70px;
+    gap:40px;
+}
+.text{
+    width:50%;
+}
+.image {
+    width:40%
+}
+.image img{
+    max-width:100%;
+    height:auto;
+}
+.text p:first-child{
+    letter-spacing: 2px;
+    color:#555;
+    margin-bottom:15px;
+}
+.text h1{
+    font-size: 70px;
+    line-height:72px;
+    margin-bottom:20px;
+    font-weight:900;
+    color:#3d3d3d
+}
+.text span{
+    color:#46A358;
+}
+.text p{
+    max-width:560px;
+    color:#787777;
+    margin-bottom:30px;
+    
+}
+.large-button{ 
+    margin-top:25px;
+    font-size:16px;
+    padding:14px 32px;
+    background:#46A358;
+    color:white;
+    border-radius:6px;
+    cursor:pointer;
+}
+button:focus,
+a:focus {
+    outline:2px solid #46A358;
+    outline-offset: 2px;
+}
+.login:hover,
+.large-button:hover {
+    background:#3c8f45;
+    transition:0.3s ease;
+}

@@ -3,19 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale:1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-main.css">
     <title> GREENSHOP</title>
     
 
 </head>
 
-    <body style="margin:auto">
-        
-        <header style="background-color: bisque; padding:15px; text-align: center;">
-            <a href="registration.html" style="color:brown">Registration</a>
+    <body>
+        <header style="background-color: rgb(255, 255, 255); padding:15px; text-align: center;">
+            <div class="container">
 
+            <img class="logo" src="./img/Logo.svg" alt="logo" width="150" height="35">
+
+            <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#plant-care">Plant Care</a>
+            <a href="#blogs">Blogs</a>    
+            </nav>
+
+            <a href="./registration.html" class="login">
+                <img src="./img/Logout.svg" alt="login"><span>Login</span>
+            </a>
+
+            </div>
         </header>
+        <main>
+            <section id="home" class="home">
+                <div class="text">
+                    <p> WELCOME TO GREENSHOP</p>
+                    <h1> LET'S MAKE <br> A BETTER <span> PLANET</span></h1>
+                    <p>We are an online plant shop offering a wide range of cheap and trendy plants.
+                        Use our plants to create an unique Urban Jungle. Order your favorite plants!
+                    </p>
+                <button class="large-button">SHOP NOW</button>
+                </div>
+                <div class="image">
+                    <img src="img/Frame_1.png" alt="plant image">
 
+                </div>
+            </section>
+        </main>
 
 
 
