@@ -49,16 +49,30 @@
                     <aside class="sidebar">
                         <h3 class="sidebar-title">Categories</h3>
                         <ul class="categories">
-                            <li><a href="#" class="active">House Plants</a></li>
-                            <li><a href="#">Potter Plants</a></li>
-                            <li><a href="#">Seeds</a></li>
-                            <li><a href="#">Small Plants</a></li>
-                            <li><a href="#">Big Plants</a></li>
-                            <li><a href="#">Succulents</a></li>
-                            <li><a href="#">Terrariums</a></li>
-                            <li><a href="#">Gardening</a></li>
-                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#" class="active">House Plants <span>(33)</span></a></li>
+                            <li><a href="#">Potter Plants <span>(12)</span></a></li>
+                            <li><a href="#">Seeds <span>(65)</span></a></li>
+                            <li><a href="#">Small Plants <span>(39)</span></a></li>
+                            <li><a href="#">Big Plants <span>(23)</span></a></li>
+                            <li><a href="#">Succulents <span>(17)</span></a></li>
+                            <li><a href="#">Terrariums <span>(19)</span></a></li>
+                            <li><a href="#">Gardening <span>(13)</span></a></li>
+                            <li><a href="#">Accessories <span>(18)</span></a></li>
                         </ul>
+                        <div class="filter-block">
+                            <h3 class="sidebar-title">Price Range</h3>
+                            <input type="range" min="39" max="1230" value="600" class="price-slider">
+                            <p class="price-value">Price: $39 &ndash; $1230</p>
+                            <button class="filter-button">Filter</button>
+                        </div>
+                        <div class="filter-block">
+                            <h3 class="sibedar-title">Size<h3>
+                                <ul class="size-filter">
+                                    <li><label><input type="checkbox"> Small <span>(119)</span></label></li>
+                                    <li><label><input type="checkbox"> Medium <span>(86)</span></label></li>
+                                    <li><label><input type="checkbox"> Large <span>(78)</span></label></li>
+                                </ul>
+                        </div>   
                         <div class="sale-banner">
                          <img src="./img/Super Sale Banner.png" alt="sale plant">
                         </div>
@@ -191,14 +205,14 @@
                         </article>
                     <article class="blog-card">
                         <img src="./img/top10succ.png" alt="Top 10 succulents for your home">
-                        <p class="blog-meta">September 12 &middot; Read in 2 minutes</p>
+                        <p class="blog-meta">September 13 &middot; Read in 2 minutes</p>
                         <h4>Top 10 Succulents<br>For Your Home</h4>
                         <p class="blog-excerpt">Best in bringing baskets, planters for high light.</p>
                         <a href="#" class="blog-link">Read More</a>
                     </article>
                     <article class="blog-card">
                         <img src="./img/Cacti&Succulent.png" alt="Cacti and Succulent care tips">
-                        <p class="blog-meta">September 12 &middot; Read in 3 minutes</p>
+                        <p class="blog-meta">September 15 &middot; Read in 3 minutes</p>
                         <h4>Cacti &amp; Succulent<br>Care Tips</h4>
                         <p class="blog-excerpt">Cacti and succulents are containers and because their still fine.</p>
                         <a href="#" class="blog-link">Read More</a>
@@ -247,17 +261,18 @@
             </div>
         </div>
     </div>
-    <div class="footer-info">
+    <div class="footer-info-wrap">
         <div class="footer-info-container">
             <div class="footer-brand">
                 <img class="logo" src="./img/Logo.svg" alt="logo" width="150" height="35">
             </div>
             <p><img src="./img/location.svg" alt="location img"> 70 West Buckingham ave. Farmingdale, NY 11735</p>
                     <p><img src="./img/mail.svg" alt="mail img"> contact@greenshop.com</p>
-                    <p><img src="./img/phone.svg" alt="phone img"> +88 0911 717 490</p>
+                    <p><img src="./img/phone.svg" alt="phone img"> +88 01911 717 490</p>
         </div>
     </div>
         <footer class="site-footer">
+            <div class="footer-card">
             <div class="footer-container">
                     <div class="footer-col">
                         <h5>My Account</h5>
@@ -306,6 +321,7 @@
                     </div>
                 </div>
             <p class="copyright">&copy; 2021 Greenshop. All Rights Reserved.</p>
+            </div>
          </footer>
     </body>
 
