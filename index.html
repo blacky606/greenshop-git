@@ -22,12 +22,16 @@
             <a href="#plant-care">Plant Care</a>
             <a href="#blogs">Blogs</a>    
             </nav>
-
+            <div class="right-side">
+                <div class="vectors">
+            <img src="./img/Vector.svg" alt="search" width="20" height="18">
+            <img src="./img/Vector_1.svg" alt="basket" width="20" height="20">
+            </div>
             <a href="./registration.html" class="login">
                 <img src="./img/Logout.svg" alt="login"><span>Login</span>
             </a>
-
             </div>
+         </div>
         </header>
         <main>
             <section id="home" class="home">
@@ -62,15 +66,15 @@
                         <div class="filter-block">
                             <h3 class="sidebar-title">Price Range</h3>
                             <input type="range" min="39" max="1230" value="600" class="price-slider">
-                            <p class="price-value">Price: $39 &ndash; $1230</p>
+                            <p class="price-value">Price: <span>$39 &ndash; $1230</span></p>
                             <button class="filter-button">Filter</button>
                         </div>
                         <div class="filter-block">
-                            <h3 class="sibedar-title">Size<h3>
+                            <h3 class="sidebar-title">Size</h3>
                                 <ul class="size-filter">
-                                    <li><label><input type="checkbox"> Small <span>(119)</span></label></li>
-                                    <li><label><input type="checkbox"> Medium <span>(86)</span></label></li>
-                                    <li><label><input type="checkbox"> Large <span>(78)</span></label></li>
+                                    <li><a href="#"> Small <span>(119)</span></label></li>
+                                    <li><a href="#"> Medium <span>(86)</span></label></li>
+                                    <li><a href="#"> Large <span>(78)</span></label></li>
                                 </ul>
                         </div>   
                         <div class="sale-banner">
@@ -101,6 +105,10 @@
                                     <div class="product-card">
                                         <div class="product-image">
                                             <img src="./img/barberton_daisy.png" alt="Barberton Daisy">
+                                            <div class="product-actions">
+                                                <a href="#"><img src="./img/Vector_1.svg" alt="basket"></a>
+                                                <a href="#"><img src="./img/heart1.svg" alt="like"></a>
+                                                <a href="#"><img src="./img/Vector.svg" alt="search"></a>
                                         </div>
                                         <h4 class="product-name">Barberton Daisy</h4>
                                         <p class="product-price">$119.00</p>
@@ -227,7 +235,7 @@
                 </div>
             </section>
         </main>
-        <div class="newsletter">
+        <footer class="site-footer">
             <div class="newsletter-container">
                 <div class="newsletter-item">
                     <img src="./img/gardencare.svg" alt="garden care. Cactus img">
@@ -260,20 +268,17 @@
                     We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours!</p>
             </div>
         </div>
-    </div>
-    <div class="footer-info-wrap">
+    <div class="footer-info-strip">
         <div class="footer-info-container">
             <div class="footer-brand">
                 <img class="logo" src="./img/Logo.svg" alt="logo" width="150" height="35">
             </div>
-            <p><img src="./img/location.svg" alt="location img"> 70 West Buckingham ave. Farmingdale, NY 11735</p>
+            <p><img src="./img/location.svg" alt="location img"> 70 West Buckingham ave.<br> Farmingdale, NY 11735</p>
                     <p><img src="./img/mail.svg" alt="mail img"> contact@greenshop.com</p>
                     <p><img src="./img/phone.svg" alt="phone img"> +88 01911 717 490</p>
         </div>
     </div>
-        <footer class="site-footer">
-            <div class="footer-card">
-            <div class="footer-container">
+             <div class="footer-columns-container">
                     <div class="footer-col">
                         <h5>My Account</h5>
                     <ul>
@@ -321,7 +326,6 @@
                     </div>
                 </div>
             <p class="copyright">&copy; 2021 Greenshop. All Rights Reserved.</p>
-            </div>
          </footer>
     </body>
 
