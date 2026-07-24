@@ -61,7 +61,58 @@ section {
         display: flex;
         gap: 25px;
         margin: 10px;
+        cursor: pointer;
     }
+    .vectors a {
+        position: relative;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+    }
+    .vectors a::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #3d3d3d;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: background-color 0.2s ease;
+}
+.icon-basket::before {
+    -webkit-mask-image: url(../img/Vector_1.svg);
+    mask-image: url(../img/Vector_1.svg);
+}
+.icon-search::before {
+    -webkit-mask-image: url(../img/Vector.svg);
+    mask-image: url(../img/Vector.svg);
+}
+.vectors a:hover::before {
+    background-color: #46A358;
+}
+.badge-count {
+    position: absolute;
+    top: -2px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
+    background: #46A358;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
 
 .login{
     display:flex;
@@ -186,6 +237,12 @@ a:focus {
 .categories a.active span {
     color: #46a358;
 }
+.categories a:hover {
+    color:#46A358;
+}
+.categories a:hover span {
+    color: #46a358;
+}
 .size-filter {
     list-style: none;
 }
@@ -196,12 +253,18 @@ a:focus {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
-    color: #565;
+    color: #555;
     font-size: 16px;
 }
 .size-filter a span {
     color: #9a9a9a;
     font-weight: 400;
+}
+.size-filter a:hover {
+    color: #46A358;
+}
+.size-filter a:hover span{
+    color: #46A358;
 }
 .sale-banner {
     position: relative;
@@ -227,7 +290,6 @@ a:focus {
     justify-content:space-between;
     align-items: center;
     margin-bottom:30px;
-    margin-left: -400px;
 }
 .tabs {
     display:flex;
@@ -242,6 +304,9 @@ a:focus {
 .tabs a.active {
     color:#46A358;
     font-weight: 700;
+}
+.tabs a:hover {
+    color: #46A358;
 }
 .sort {
     display: flex;
@@ -308,13 +373,34 @@ a:focus {
 .product-card:hover .product-actions{
     opacity: 1;
 }
-.product-image img {
-    max-width: 80%;
-    max-height: 80%;
-}
-.product-actions img {
+.product-actions a::before {
+    content: "";
+    display: block;
     width: 18px;
     height: 18px;
+    background-color: #3d3d3d;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: background-color 0.2s ease;
+}
+.icon-basket::before {
+    -webkit-mask-image: url(../img/Vector_1.svg);
+    mask-image: url(../img/Vector_1.svg);
+}
+.icon-heart::before {
+    -webkit-mask-image: url(../img/heart1.svg);
+    mask-image: url(../img/heart1.svg);
+}
+.icon-search::before {
+    -webkit-mask-image: url(../img/Vector.svg);
+    mask-image: url(../img/Vector.svg);
+}
+.product-actions a:hover::before {
+    background-color: #46a358;
 }
 .product-name {
     padding: 15px 15px 0;
@@ -396,24 +482,6 @@ a:focus {
     background: #3c8f45;
     transition: 0.3s ease;
 }
-.size-filter {
-    list-style: none;
-}
-.size-filter li {
-    margin-bottom: 14px;
-}
-.size-filter a {
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    color: #555;
-    font-size: 16px;
-}
-.size-filter span {
-    color: #9a9a9a;
-    font-weight: 400;
-}
-
 .promo {
     max-width: 1200px;
     margin: 10vh auto 0;
@@ -597,14 +665,12 @@ a:focus {
     background: rgba(70, 163, 88, 0.16);
 }
 .footer-info-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 22px 20px;
+    padding: 22px 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 48px;
 }
 .footer-brand {
     display: flex;
