@@ -178,6 +178,7 @@ section {
 }
 .text{
     width:50%;
+    margin: 0 43px 0;
 }
 .image {
     width:40%
@@ -206,7 +207,7 @@ section {
 .text p{
     max-width:560px;
     font-weight: 400;
-    height: 45px;
+    height: 25px;
     color:#787777;
     margin-bottom:44px;
     
