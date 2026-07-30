@@ -7,6 +7,28 @@
 }
 @import "./fonts.css";
 
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: hide-preloader 0.6s ease forwards;
+    animation-delay: 1.5s;
+}
+.preloader-spinner {
+    width: 80px;
+    height: 80px;
+}
+@keyframes hide-preloader {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
 body {
    
     font-family: "Cera Pro", sans-serif;
@@ -15,17 +37,18 @@ body {
     line-height: 1.6;
 }
 section {
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
     header{
 
-        background:#fff;
+        background: #f5f5f5;
         padding:30px 0 14px;
 
     }
 .container{
     max-width:1200px;
     margin:0 auto;
+    padding: 25px 0px 0px 0px;
     display:flex;
      justify-content: space-between;
      align-items: center;
@@ -36,6 +59,9 @@ section {
     nav { 
         display:flex;
         gap:50px;
+        width: 360px;
+        height: 45px; 
+        padding: 8px 0px 0px 0px;
     }
     nav a {
         text-decoration: none;
@@ -46,7 +72,7 @@ section {
     }
     nav a::after {
         position: absolute;
-        bottom: -16px;
+        bottom: -5px;
         content: "";
         transition-timing-function: linear;
         transition-property: width;
@@ -68,11 +94,11 @@ section {
     .right-side {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 30px;
     }
     .vectors {
         display: flex;
-        gap: 25px;
+        gap: 30px;
         margin: 10px;
         cursor: pointer;
     }
@@ -81,8 +107,8 @@ section {
         display:flex;
         align-items: center;
         justify-content: center;
-        width: 28px;
-        height: 28px;
+        width: 20px;
+        height: 20px;
     }
     .vectors a::before {
     content: "";
@@ -131,23 +157,24 @@ section {
     display:flex;
     align-items: center;
     gap:8px;
-    padding:10px 25px;
+    padding:10px 16px;
     background:#46A358;
     color:#fff;
     border-radius:6px;
     cursor:pointer;
     text-decoration: none;
+    width: 100px;
+    height: 35px;
 }
 .home {
-    max-width: 1200px;
-    min-height:450px;
-    margin: 50px auto 0;
+    max-width: 1211px;
+    min-height:470px;
+    margin: 12px auto 46px;
     background:#f8f8f8;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding:60px 70px;
-    gap:40px;
+    padding:60px 5px;
 }
 .text{
     width:50%;
@@ -162,12 +189,12 @@ section {
 .text p:first-child{
     letter-spacing: 2px;
     color:#555;
-    margin-bottom:15px;
+    margin-bottom:7px;
 }
 .text h1{
     font-size: 70px;
-    line-height:72px;
-    margin-bottom:20px;
+    line-height:70px;
+    margin-bottom: 5px;
     font-weight:900;
     color:#3d3d3d;
     white-space: nowrap;
@@ -178,8 +205,10 @@ section {
 }
 .text p{
     max-width:560px;
+    font-weight: 400;
+    height: 45px;
     color:#787777;
-    margin-bottom:30px;
+    margin-bottom:44px;
     
 }
 .large-button{ 
@@ -341,7 +370,8 @@ a:focus {
     flex: 1;
 }
 .product-card {
-    width: auto;
+    width: 258px;
+    height: 300px;
     background: #f8f8f8;
     border-radius: 8px;
     overflow: hidden;
@@ -359,11 +389,12 @@ a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 260px;
+    height: 250px;
+    width: 250px;
 }
 .product-actions {
     position: absolute;
-    bottom: 15px;
+    bottom: -7px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -466,7 +497,8 @@ a:focus {
     color: #e5e5e5;
 }
 .filter-block {
-    margin-top: 40px;
+    margin-top: 36px;
+    margin-bottom: 46px;
 }
 .price-slider {
     width:100%;
@@ -485,11 +517,12 @@ a:focus {
 .filter-button {
     margin-top: 16px;
     padding: 10px 26px;
+    font-weight: 700;
     background: #46A358;
     color: #fff;
     border-radius: 6px;
     cursor:pointer;
-    font-size: 14px;
+    font-size: 16px;
 }
 .filter-button:hover {
     background: #3c8f45;
@@ -509,6 +542,7 @@ a:focus {
     background: #f8f8f8;
     display:flex;
     align-items:center;
+    margin: 0 14px 0 14px;
 }
 .promo-card img{
     width: 45%;
@@ -603,7 +637,8 @@ a:focus {
 }
 .site-footer {
     max-width: 1200px;
-    margin: 10vh auto 0;
+    margin: 0 auto 0;
+    
     background: #f8f8f8;
     border-radius: 12px;
     overflow: hidden;
@@ -700,9 +735,6 @@ a:focus {
     font-size: 14px;
     line-height: 1.4;
     color: #3d3d3d;
-}
-.site-footer {
-    padding: 50px 0 40px;
 }
 .footer-columns-container {
     max-width: 1200px;
