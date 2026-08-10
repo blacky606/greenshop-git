@@ -63,7 +63,18 @@ section {
         height: 45px; 
         padding: 8px 0px 0px 0px;
     }
-    nav a {
+    nav > ul {
+        display: flex;
+        gap: 50px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav > ul > li{ 
+        position: relative;
+    }
+    nav a
+     {
         text-decoration: none;
         color:#3d3d3d;
         position:relative;
@@ -86,11 +97,79 @@ section {
     nav a:hover::after {
         width: 100%;
     }
-
-    nav a:active,
-    nav a:hover {
-        font-weight: 700;
-       }
+           .sublist {
+        position: absolute;
+        display: none;
+        top: calc(100% + 12px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 188px;
+        margin: 0;
+        list-style: none;
+        background: rgb(237, 246, 238, 1);
+        z-index: 100;
+        box-sizing: border-box;
+        }
+        nav > ul > li:hover .sublist {
+            display: block;
+        }
+        nav > ul > li:hover > .sublist::before {
+            content: "";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 12px;
+            background: transparent;
+        }
+        .sublist-second {
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 100%;
+            width: 188px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background: #edf6ee;
+            z-index: 100;
+            box-sizing: border-box;
+        }
+        .sublist > li:hover > .sublist-second {
+            display: block;
+        }
+        .sublist li,
+        .sublist-second li {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .sublist li a,
+        .sublist-second li a {
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 7px 14px 8px;
+            color: #3d3d3d;
+            white-space: nowrap;
+            font-weight: 400;
+            transition: background 0.2s ease, color 0.2s ease;
+              span {
+            text-align: end;
+        }
+        }
+        .sublist li a::after,
+        .sublist-second li a::after {
+            display: none;
+        }
+        .sublist > li:hover > a,
+        .sublist-second > li:hover > a {
+            background: #46A358;
+            color: #fff;
+            font-weight: 700;
+        }
     .right-side {
         display: flex;
         align-items: center;
