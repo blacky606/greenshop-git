@@ -181,39 +181,24 @@ section {
         margin: 10px;
         cursor: pointer;
     }
-    .vectors a {
+    .vectors .btn-vector {
         position: relative;
-        display:flex;
+        display:inline-flex;
         align-items: center;
         justify-content: center;
         width: 20px;
         height: 20px;
+        text-decoration: none;
+        color: #3d3d3d;
     }
-    .vectors a::before {
-    content: "";
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-color: #3d3d3d;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    transition: background-color 0.2s ease;
-}
-.icon-basket::before {
-    -webkit-mask-image: url(../img/Vector_1.svg);
-    mask-image: url(../img/Vector_1.svg);
-}
-.icon-search::before {
-    -webkit-mask-image: url(../img/Vector.svg);
-    mask-image: url(../img/Vector.svg);
-}
-.vectors a:hover::before {
-    background-color: #46A358;
-}
+    .vectors .btn-vector:hover {
+        color: #46A358;
+    }
+    .icon-search .icon-basket {
+        width: 20;
+        height: 20;
+        fill: currentColor;
+    }
 .badge-count {
     position: absolute;
     top: -2px;
@@ -244,6 +229,10 @@ section {
     text-decoration: none;
     width: 100px;
     height: 35px;
+}
+.login-icon {
+    width: 20px;
+    height: 20px;
 }
 .home {
     max-width: 1211px;
@@ -746,7 +735,7 @@ a:focus {
     display: flex;
     align-items: center;
     gap:30px;
-    padding: 0px 20px 40px;
+    padding: 0px 20px 25px;
 }
 .newsletter-item {
     display: flex;
@@ -756,9 +745,9 @@ a:focus {
     padding-right: 30px;
     border-right: 1px solid #e0e0e0;
 }
-.newsletter-item img {
-    width: 76px;
-    height: 76px;
+.newsletter-item svg {
+    width: 90px;
+    height: 90px;
 }
 .newsletter-item h5 {
     font-size: 15px;
@@ -775,7 +764,7 @@ a:focus {
 .newsletter-subscribe h5 {
     font-size: 18px;
     color: #3d3d3d;
-    margin-bottom: 18px;
+    white-space: nowrap;
 }
 .newsletter-form {
     display:flex;
@@ -825,7 +814,7 @@ a:focus {
     font-weight: 700;
     color: #205a2d;
 }
-.footer-info-container p {
+.footer-info-container p{
     display: flex;
     align-items: center;
     gap: 10px;
@@ -857,7 +846,7 @@ a:focus {
     text-decoration: none;
     font-size: 14px;
 }
-.footer-col a:hover {
+.footer-col a:hover{
     color: #46A358;
 }
 .footer-social .social-icons {
@@ -865,7 +854,8 @@ a:focus {
     gap: 10px;
     margin-bottom: 24px;
 }
-.footer-social .social-icons img {
+.footer-social .social-icons img,
+.footer-social .social-icons svg {
     width: 32px;
     height: 32px;
 }
