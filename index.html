@@ -9,15 +9,7 @@
     
 
 </head>
-    <script>
-        const burger = documtns.getElemtById('burgerBtn');
-        const nav = document.querySelector('header nav');
-        burger.addEventListener ('click', () => {
-            const isOpen = nav.classList.toggle('nav-open');
-            burger.classList.toggle('active', isOpen);
-            burger.setAttribute('aria-expanded', isOpen);
-        });
-        </script>
+
     <body>
         <div class="preloader" id="preloader">
             <img src="./img/preloader.svg" alt="loading" class="preloader-spinner">    
@@ -65,12 +57,12 @@
                     <span>Login</span>
             </a>
             </div>
-         </div>
-         <button class="burger" id="burgerbtn" arial-label="menu" aria-expanden="false">
+                     <button class="burger" id="burgerBtn" aria-label="menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
          </button>
+         </div>
         </header>
         <main>
             <section id="home" class="home">
@@ -417,6 +409,15 @@
                 </div>
             <p class="copyright">&copy; 2021 Greenshop. All Rights Reserved.</p>
          </footer>
+             <script>
+        const burger = document.getElemetById('burgerBtn');
+        const nav = document.querySelector('header nav');
+        burger.addEventListener ('click', () => {
+            const isOpen = nav.classList.toggle('nav-open');
+            burger.classList.toggle('active', isOpen);
+            burger.setAttribute('aria-expanded', isOpen);
+        });
+        </script>
     </body>
 
 
