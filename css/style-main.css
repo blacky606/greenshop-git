@@ -857,8 +857,7 @@ a:focus {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    gap: 170px;
     padding: 40px 20px 30px;
 }
 .footer-col h5 {
