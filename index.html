@@ -9,7 +9,15 @@
     
 
 </head>
-
+    <script>
+        const burger = documtns.getElemtById('burgerBtn');
+        const nav = document.querySelector('header nav');
+        burger.addEventListener ('click', () => {
+            const isOpen = nav.classList.toggle('nav-open');
+            burger.classList.toggle('active', isOpen);
+            burger.setAttribute('aria-expanded', isOpen);
+        });
+        </script>
     <body>
         <div class="preloader" id="preloader">
             <img src="./img/preloader.svg" alt="loading" class="preloader-spinner">    
@@ -58,6 +66,11 @@
             </a>
             </div>
          </div>
+         <button class="burger" id="burgerbtn" arial-label="menu" aria-expanden="false">
+            <span></span>
+            <span></span>
+            <span></span>
+         </button>
         </header>
         <main>
             <section id="home" class="home">

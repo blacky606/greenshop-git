@@ -234,6 +234,32 @@ section {
     width: 20px;
     height: 20px;
 }
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    cursor: pointer;
+}
+.burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #3d3d3d;
+    transition: 0.3s ease;
+}
+.burger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
 .home {
     max-width: 1211px;
     min-height:470px;
@@ -875,4 +901,282 @@ a:focus {
     text-align: center;
     font-size: 13px;
     color: #9a9a9a;
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .home {
+        max-width: 100%;
+        padding: 0 30px;
+    }
+    .text h1 {
+        font-size: 48px;
+        line-height: 54px;
+    }
+    .shop-container {
+        padding: 0 20px;
+    }
+    .product-card {
+        width: 100%;
+        height: auto;
+    }
+    .product-image {
+        width: 100%;
+        height: 220px;
+    }
+    .promo-card img {
+        width: 180px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+        gap: 12px;
+    }
+    nav {
+        width: auto;
+        height: auto;
+    }
+    nav > ul {
+        gap: 20px;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+    .text {
+        width: 100%;
+        height: auto;
+        margin: 0 0 30px;
+    }
+    .text p {
+        margin: auto;
+    }
+    .image {
+        width: 70%;
+    }
+    .text h1 {
+        white-space: normal;
+        font-size: 42px;
+        line-height: 48px;
+    }
+    .shop-container {
+        padding: 0 20px;
+    }
+    .sidebar {
+        float: none;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .catalog {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .product-card {
+        width: 100%;
+        height: auto;
+    }
+    .product-image {
+        width: 100%;
+        height: 220px;
+    }
+    .promo {
+        flex-direction: column;
+    }
+    .newsletter-container {
+        flex-wrap: wrap;
+    }
+    .newsletter-item {
+        flex: 1 1 45%;
+        border-right: none;
+        margin-bottom: 20px;
+    }
+    .newsletter-subscribe {
+        flex: 1 1 100%;
+    }
+    .footer-columns-container {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .footer-col {
+        flex: 1 1 40%;
+    }
+    .sale-banner {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0 15px;
+        position: relative;
+    }
+    .burger {
+        display: flex;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.08 );
+        padding: 20px 15px;
+        z-index: 200;
+        order: unset;
+    }
+    nav.nav-open {
+        display: block;
+    }
+    nav > ul {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .sublist,
+    .sublist-second {
+        display: none !important;
+    }
+    .right-side {
+        gap: 15px;
+    }
+    .home {
+        flex-direction: column;
+        padding: 20px 15px;
+        text-align: center;
+        margin: 12px auto 20px;
+    }
+    .text {
+        width: 100%;
+        height: auto;
+        margin: 0 0 20px;
+    }
+    .text p {
+        margin: auto;
+    }
+    .image {
+        width: 90%;
+    }
+    .text h1 {
+        white-space: normal;
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: -1px;
+    }
+    .text p {
+        height: auto;
+        font-size: 14px;
+    }
+    .large-button {
+        width: 100%;
+    }
+    .shop-container {
+        padding: 0 15px;
+    }
+    .sidebar {
+        float: none;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .sale-banner {
+        display: none;
+    }
+    .catalog {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    .catalog-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .products {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .product-card {
+        width: 100%;
+        height: auto;
+    }
+    .product-image {
+        width: 100%;
+        height: 220px;
+    }
+    .product-actions {
+        opacity: 1;
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .shop-pagination {
+        margin-top: 30px;
+    }
+    .pagination {
+        justify-content: center;
+    }
+    .promo {
+        flex-direction: column;
+        margin: 5vh auto 0;
+    }
+    .promo-card {
+        margin: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+    .promo-card img {
+        width: 60%;
+        margin: 20px 0 0;
+    }
+    .promo-text {
+        text-align: center;
+        padding: 20px;
+    }
+    .promo-text p {
+        max-width: 100%;
+        margin-left: 0;
+    }
+    .blogs {
+        padding: 0 15px 10vh;
+    }
+    .blog-grid {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .newsletter-item {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 0 0 20px;
+        width: 100%;
+    }
+    .newsletter-subscribe {
+        width: 100%;
+        padding-top: 20px;
+    }
+    .newsletter-subscribe h5 {
+        white-space: normal;
+    }
+    .footer-info-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .footer-columns-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .newsletter-form {
+        max-width: 100%;
+    }
+    .newsletter-form input {
+        min-width: 0;
+    }
 }
